@@ -1,9 +1,12 @@
 import React from "react";
-import { Container, Navbar, NavbarBrand, Nav } from "react-bootstrap";
-import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
-import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Container } from "react-bootstrap";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import HomePage from "./pages/HomePage";
 
 class App extends React.Component {
   constructor(props) {
@@ -37,18 +40,43 @@ class App extends React.Component {
     return (
       <Router>
         <Container className="p-0" fluid={true}>
-          <Navbar className="border-bottom" bg="transparent" expand="lg">
-            <NavbarBrand>Matthew Hook</NavbarBrand>
-            <NavbarToggle className="border-0 m-2" aria-controls="navbar-toggle" />
-            <NavbarCollapse id="navbar-toggle">
-              <Nav className="ml-auto">
-                <Link className="nav-link" to="/">Home</Link>
-                <Link className="nav-link" to="/about">About</Link>
-                <Link className="nav-link" to="/contact">Contact</Link>
-              </Nav>
-            </NavbarCollapse>
-          </Navbar> 
-          <h1>yo</h1>
+          <Header />
+          <Switch>
+            <Route
+              path="/"
+              exact
+              render={() => (
+                <HomePage
+                  title={this.state.home.title}
+                  subTitle={this.state.home.subTitle}
+                  text={this.state.home.text}
+                />
+              )}
+            />
+            <Route
+              path="/about"
+              exact
+              render={() => (
+                <AboutPage
+                  title={this.state.about.title}
+                  subTitle={this.state.about.subTitle}
+                  text={this.state.about.text}
+                />
+              )}
+            />
+            <Route
+              path="/contact"
+              exact
+              render={() => (
+                <ContactPage
+                  title={this.state.contact.title}
+                  subTitle={this.state.contact.subTitle}
+                  text={this.state.contact.text}
+                />
+              )}
+            />
+          </Switch>
+          <Footer />
         </Container>
       </Router>
     );
