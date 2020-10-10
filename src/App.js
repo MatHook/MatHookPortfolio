@@ -24,9 +24,7 @@ class App extends React.Component {
         text: "Got some ideas for you",
       },
       about: {
-        title: "About Title",
-        subTitle: "About SubTitle",
-        text: "Do some text if you need to",
+        title: "About Me",
       },
       contact: {
         title: "Contact Title",
@@ -59,8 +57,6 @@ class App extends React.Component {
               render={() => (
                 <AboutPage
                   title={this.state.about.title}
-                  subTitle={this.state.about.subTitle}
-                  text={this.state.about.text}
                 />
               )}
             />
