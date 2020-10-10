@@ -11,13 +11,13 @@ function Header() {
       <NavbarToggle className="border-0 m-2" aria-controls="navbar-toggle" />
       <NavbarCollapse id="navbar-toggle">
         <Nav className="ml-auto">
-          <Link className="nav-link" to="/">
+          <Link className="nav-link" to="/" data-toggle="collapse">
             Home
           </Link>
-          <Link className="nav-link" to="/about">
+          <Link className="nav-link" to="/about" data-toggle="collapse">
             About
           </Link>
-          <Link className="nav-link" to="/contact">
+          <Link className="nav-link" to="/contact" data-toggle="collapse">
             Contact
           </Link>
         </Nav>

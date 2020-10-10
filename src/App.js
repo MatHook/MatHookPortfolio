@@ -27,9 +27,8 @@ class App extends React.Component {
         title: "About Me",
       },
       contact: {
-        title: "Contact Title",
-        subTitle: "Contact SubTitle",
-        text: "Do some text if you need to",
+        title: "Have any questions?",
+        subTitle: "You may ask!",
       },
     };
   }
@@ -67,7 +66,6 @@ class App extends React.Component {
                 <ContactPage
                   title={this.state.contact.title}
                   subTitle={this.state.contact.subTitle}
-                  text={this.state.contact.text}
                 />
               )}
             />

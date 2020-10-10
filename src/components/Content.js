@@ -7,7 +7,7 @@ function Content(props) {
     opacity: 1,
     from: { opacity: 0 },
     config: { tension: 55, friction: 40 },
-    delay: 1000
+    delay: 1700
   });
 
   return (

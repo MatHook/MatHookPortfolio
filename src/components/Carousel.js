@@ -13,7 +13,7 @@ export default class Carousel extends Component {
           subTitle: "Card 1 SubTitle",
           imgSrc: "./card1.jpg",
           link: "",
-          isSelected: true,
+          isSelected: false,
         },
         {
           id: 1,
