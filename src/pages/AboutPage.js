@@ -8,23 +8,34 @@ function AboutPage(props) {
       <Hero title={props.title} />
       <Content>
         <p>
-          Заканчиваю высшее образование по специальности Программного Инженера,
-          а также имею успешный опыт в startup’ах. Занимался написанием фронта
-          на проектах. Вот некоторые из них:
+          I am finishing my higher education with a degree in Software Engineer,
+          and also have successful experience in startups. Was engaged in
+          writing FrontEnd on projects. Here are some of them:
         </p>
         <p>
-          Mobius - агрегатор информации в единую новостную ленту из социальных
-          сетей; Amethy - торговая площадка для авторов; С целью личностного
-          роста осваиваю навыки на backend в своих личных проектах: HSE Events
-          Calendar - интегратор событий в календарь студента; AutoSwipeBot - бот
-          для оптимизации нахождения второй половины;
+          <li>
+            <b>Mobius </b>is an aggregator of information into a single news
+            feed from social networks
+          </li>
+          <li>
+            <b>Amethy</b> is a marketplace for authors
+          </li>
+          For the purpose of personal growth, I master skills on the BackEnd in
+          my personal projects:
+          <li>
+            <b>HSE Events Calendar</b> - integrator of events into the student's
+            calendar
+          </li>
+          <li>
+            <b>AutoSwipeBot</b> - bot for optimizing finding the second half
+          </li>
         </p>
         <p>
-          Ищу нестандартные пути решения и никогда не отступаю от задуманного
-          при виде неудач, так как командный подход в решению задач всегда
-          приносит положительный результат. Владею английским языком (уровень
-          C1). Жил и работал пол года в США, в настоящее время продолжаю
-          пополнять словарный запас и улучшить акцент.
+          I am looking for non-standard solutions and never deviate from my
+          plans at the sight of failures, since a team approach to solving
+          problems always brings a positive result. I speak English (level C1).
+          Lived and worked for half a year in the USA, currently I continue to
+          expand my vocabulary and improve my accent.
         </p>
       </Content>
     </div>

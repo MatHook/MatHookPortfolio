@@ -1,3 +1,4 @@
 .App {
   cursor: default;
+  min-width: 500px;  
 }
