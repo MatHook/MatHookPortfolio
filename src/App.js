@@ -19,9 +19,9 @@ class App extends React.Component {
         { title: "Contact", path: "/contact" },
       ],
       home: {
-        title: "Home Title",
-        subTitle: "Home SubTitle",
-        text: "Do some text if you need to",
+        title: "Just an overthinker ❤️‍🔥",
+        subTitle: "See a fire in my eyes",
+        text: "Got some ideas for you",
       },
       about: {
         title: "About Title",
@@ -39,7 +39,7 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <Container className="p-0" fluid={true}>
+        <Container className="p-0 App" fluid={true}>
           <Header />
           <Switch>
             <Route
