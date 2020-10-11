@@ -9,8 +9,8 @@ export default function Footer() {
           <Col className="p-0" md={3} sd={12}>
             Matthew Hook
           </Col>
-          <Col className="p-0 d-flex justify-content-end" md={3}>
-            This site was made by MatHook
+          <Col className="p-0 d-flex justify-content-end" md={6}>
+            Copyright @ 2020 - Matthew Hook. All rights Reserved
           </Col>
         </Row>
       </Container>

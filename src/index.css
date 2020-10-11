@@ -51,3 +51,27 @@ code {
   color: #EE6352;
   padding: 10px 15px;
 }
+
+.contact {     
+  display: inline-block;     
+  position: relative;    
+  z-index: 1;     
+  padding: 2em;
+  margin: -2em; 
+  color: black
+}
+
+.contact:hover {
+  color: #FF571B;
+}
+
+.icon {
+  vertical-align: text-bottom;
+  margin-right: 5px;
+}
+
+.vk-icon {
+  vertical-align: bottom;
+  display: inline-block;
+  margin-right: 5px;
+}
