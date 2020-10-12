@@ -16,6 +16,10 @@ code {
     monospace;
 }
 
+p {
+  text-align: justify;
+}
+
 .g-card {
   margin: 20px;
 }
