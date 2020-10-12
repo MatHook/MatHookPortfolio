@@ -1,8 +1,26 @@
 import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import Content from "../components/Content";
 import Hero from "../components/Hero";
+import { GrAchievement } from "react-icons/gr";
+import {
+  SiHtml5,
+  SiJavascript,
+  SiReact,
+  SiRedux,
+  SiSass,
+  SiTypescript,
+} from "react-icons/si";
+import { useSpring, animated } from "react-spring";
 
 function AboutPage(props) {
+  const style = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+    config: { tension: 55, friction: 40 },
+    delay: 1700,
+  });
+
   return (
     <div>
       <Hero title={props.title} />
@@ -38,6 +56,85 @@ function AboutPage(props) {
           expand my vocabulary and improve my accent.
         </p>
       </Content>
+      <animated.div style={style}>
+        <Container fluid={true}>
+          <Row className="justify-content-center">
+            <Col md={6}>
+              <h1 className="d-inline-block">
+                <GrAchievement /> Skills
+              </h1>
+            </Col>
+          </Row>
+          <Row className="justify-content-center">
+            <Col md={4}>
+              <h2>Front-end</h2>
+              <Col>
+                <h3>
+                  <SiJavascript /> JavaScript
+                </h3>
+              </Col>
+              <Col>
+                <h3>
+                  <SiTypescript /> TypeScript
+                </h3>
+              </Col>
+              <Col>
+                <h3>
+                  <SiReact /> React
+                </h3>
+              </Col>
+              <Col>
+                <h3>
+                  <SiRedux /> Redux
+                </h3>
+              </Col>
+              <Col>
+                <h3>
+                  <SiHtml5 /> HTML5
+                </h3>
+              </Col>
+              <Col>
+                <h3>
+                  <SiSass /> Sass/Less
+                </h3>
+              </Col>
+            </Col>
+            <Col md={4}>
+              <h2>Back-end</h2>
+              <Col>
+                <h3>
+                  <SiJavascript /> JavaScript
+                </h3>
+              </Col>
+              <Col>
+                <h3>
+                  <SiTypescript /> TypeScript
+                </h3>
+              </Col>
+              <Col>
+                <h3>
+                  <SiReact /> React
+                </h3>
+              </Col>
+              <Col>
+                <h3>
+                  <SiRedux /> Redux
+                </h3>
+              </Col>
+              <Col>
+                <h3>
+                  <SiHtml5 /> HTML5
+                </h3>
+              </Col>
+              <Col>
+                <h3>
+                  <SiSass /> Sass/Less
+                </h3>
+              </Col>
+            </Col>
+          </Row>
+        </Container>
+      </animated.div>
     </div>
   );
 }
