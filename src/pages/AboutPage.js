@@ -2,16 +2,13 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Content from "../components/Content";
 import Hero from "../components/Hero";
-import { GrAchievement } from "react-icons/gr";
-import {
-  SiHtml5,
-  SiJavascript,
-  SiReact,
-  SiRedux,
-  SiSass,
-  SiTypescript,
-} from "react-icons/si";
+import { FaSass, FaJava } from "react-icons/fa";
+import { GrAchievement, GrHtml5 } from "react-icons/gr";
+import { DiNginx, DiPostgresql, DiDocker, DiJavascript1 } from "react-icons/di";
+import { SiReact, SiRedux, SiTypescript, SiPython } from "react-icons/si";
 import { useSpring, animated } from "react-spring";
+import nestIcon from '@iconify/icons-file-icons/nestjs'
+import { Icon } from '@iconify/react'
 
 function AboutPage(props) {
   const style = useSpring({
@@ -58,77 +55,77 @@ function AboutPage(props) {
       </Content>
       <animated.div style={style}>
         <Container fluid={true}>
-          <Row className="justify-content-center">
-            <Col md={6}>
+          <Row className="justify-content-center" xs={2}>
+            <Col md={4}>
               <h1 className="d-inline-block">
                 <GrAchievement /> Skills
               </h1>
             </Col>
           </Row>
           <Row className="justify-content-center">
-            <Col md={4}>
+            <Col md={4} xs={6}>
               <h2>Front-end</h2>
-              <Col>
+              <Col className="pl-0">
                 <h3>
-                  <SiJavascript /> JavaScript
+                  <DiJavascript1 /> JavaScript
                 </h3>
               </Col>
-              <Col>
+              <Col className="pl-0">
                 <h3>
                   <SiTypescript /> TypeScript
                 </h3>
               </Col>
-              <Col>
+              <Col className="pl-0">
                 <h3>
                   <SiReact /> React
                 </h3>
               </Col>
-              <Col>
+              <Col className="pl-0">
                 <h3>
                   <SiRedux /> Redux
                 </h3>
               </Col>
-              <Col>
+              <Col className="pl-0">
                 <h3>
-                  <SiHtml5 /> HTML5
+                  <GrHtml5 /> HTML5
                 </h3>
               </Col>
-              <Col>
+              <Col className="pl-0">
                 <h3>
-                  <SiSass /> Sass/Less
+                  <FaSass /> Sass/Less
                 </h3>
               </Col>
             </Col>
-            <Col md={4}>
+            <Col md={4} xs={5}>
               <h2>Back-end</h2>
-              <Col>
+              <Col className="pl-0">
                 <h3>
-                  <SiJavascript /> JavaScript
+                  <SiPython /> Python
                 </h3>
               </Col>
-              <Col>
+              <Col className="pl-0">
                 <h3>
-                  <SiTypescript /> TypeScript
+                  <DiPostgresql /> Postgre
                 </h3>
               </Col>
-              <Col>
+              <Col className="pl-0">
                 <h3>
-                  <SiReact /> React
+                  <Icon icon={nestIcon} /> NestJS
                 </h3>
               </Col>
-              <Col>
+              <Col className="pl-0">
                 <h3>
-                  <SiRedux /> Redux
+                  <DiNginx /> NGINX
                 </h3>
               </Col>
-              <Col>
+              <Col className="pl-0">
                 <h3>
-                  <SiHtml5 /> HTML5
+                  <DiDocker /> Docker
                 </h3>
               </Col>
-              <Col>
+              <Col className="pl-0">
                 <h3>
-                  <SiSass /> Sass/Less
+                  <FaJava /> Java
                 </h3>
               </Col>
             </Col>
