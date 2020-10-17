@@ -12,7 +12,7 @@ function ContactPage(props) {
       <Container>
         <Row className="p-0 justify-content-center">
           <Col>
-            <FaTelegramPlane className="icon" />
+            <FaTelegramPlane className="icon" size={25} />
             <a
               className="contact"
               href="http://t.me/MatHook"
@@ -23,7 +23,7 @@ function ContactPage(props) {
             </a>
           </Col>
           <Col>
-            <Icon24LogoVk className="vk-icon" />
+            <Icon24LogoVk className="vk-icon" width={30} height={30} />
             <a
               className="contact"
               href="https://vk.com/mathook"
@@ -34,7 +34,7 @@ function ContactPage(props) {
             </a>
           </Col>
           <Col>
-            <SiGmail className="icon" />
+            <SiGmail className="icon" size={25} />
             <a
               className="contact"
               href="mailto:mathook00@gmail.com"
@@ -45,7 +45,7 @@ function ContactPage(props) {
             </a>
           </Col>
           <Col>
-            <FaGithub className="icon" />
+            <FaGithub className="icon" size={25} />
             <a
               className="contact"
               href="https://github.com/MatHook"

@@ -3,11 +3,14 @@ import { Navbar, NavbarBrand, Nav } from "react-bootstrap";
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import { Link } from "react-router-dom";
+import Typist from "react-typist";
 
 function Header() {
   return (
     <Navbar className="border-bottom" bg="transparent" expand="lg">
-      <NavbarBrand>Matthew Hook</NavbarBrand>
+      <NavbarBrand>
+        <Typist avgTypingDelay={200} cursor={{ hideWhenDone: true, hideWhenDoneDelay: 1000}}> &lt; Matthew / Hook &gt; </Typist>
+      </NavbarBrand>
       <NavbarToggle className="border-0 m-2" aria-controls="navbar-toggle" />
       <NavbarCollapse id="navbar-toggle">
         <Nav className="ml-auto">

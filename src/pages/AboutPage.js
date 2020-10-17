@@ -7,8 +7,8 @@ import { GrAchievement, GrHtml5 } from "react-icons/gr";
 import { DiNginx, DiPostgresql, DiDocker, DiJavascript1 } from "react-icons/di";
 import { SiReact, SiRedux, SiTypescript, SiPython } from "react-icons/si";
 import { useSpring, animated } from "react-spring";
-import nestIcon from '@iconify/icons-file-icons/nestjs'
-import { Icon } from '@iconify/react'
+import nestIcon from "@iconify/icons-file-icons/nestjs";
+import { Icon } from "@iconify/react";
 
 function AboutPage(props) {
   const style = useSpring({
