@@ -10,7 +10,7 @@ function ContactPage(props) {
     <Container fluid={true}>
       <Hero title={props.title} subTitle={props.subTitle} text={props.text} />
       <Container>
-        <Row className="p-0 justify-content-center">
+        <Row className="p-0 justify-content-center" sm={2} md={4}>
           <Col>
             <FaTelegramPlane className="icon" size={25} />
             <a
