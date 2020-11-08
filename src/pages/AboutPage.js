@@ -9,6 +9,7 @@ import { SiReact, SiRedux, SiTypescript, SiPython } from "react-icons/si";
 import { useSpring, animated } from "react-spring";
 import nestIcon from "@iconify/icons-file-icons/nestjs";
 import { Icon } from "@iconify/react";
+import GitHubCalendar from "react-github-calendar";
 
 function AboutPage(props) {
   const style = useSpring({
@@ -52,6 +53,9 @@ function AboutPage(props) {
           Lived and worked for half a year in the USA, currently I continue to
           expand my vocabulary and improve my accent.
         </p>
+        <div className="text-center">
+          <GitHubCalendar username="mathook" blockMargin={4} />
+        </div>
       </Content>
       <animated.div style={style}>
         <Container fluid={true}>

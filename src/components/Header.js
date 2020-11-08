@@ -9,7 +9,13 @@ function Header() {
   return (
     <Navbar className="border-bottom" bg="transparent" expand="lg">
       <NavbarBrand>
-        <Typist avgTypingDelay={200} cursor={{ hideWhenDone: true, hideWhenDoneDelay: 1000}}> &lt; Matthew / Hook &gt; </Typist>
+        <Typist
+          avgTypingDelay={200}
+          cursor={{ hideWhenDone: true, hideWhenDoneDelay: 1000 }}
+        >
+          {" "}
+          &lt; Matthew / Hook &gt;{" "}
+        </Typist>
       </NavbarBrand>
       <NavbarToggle className="border-0 m-2" aria-controls="navbar-toggle" />
       <NavbarCollapse id="navbar-toggle">
