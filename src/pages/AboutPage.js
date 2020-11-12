@@ -53,8 +53,13 @@ function AboutPage(props) {
           Lived and worked for half a year in the USA, currently I continue to
           expand my vocabulary and improve my accent.
         </p>
+
         <div className="text-center">
           <GitHubCalendar username="mathook" blockMargin={4} />
+          <p className="text-danger text-center">
+            Some of the working days are not <i>active</i> because everyone have
+            the private corners in our minds
+          </p>
         </div>
       </Content>
       <animated.div style={style}>
