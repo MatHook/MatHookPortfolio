@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import HomePage from "./pages/HomePage";
+import InstaPage from "./pages/InstaPage";
 
 class App extends React.Component {
   constructor(props) {
@@ -54,11 +55,7 @@ class App extends React.Component {
             <Route
               path="/about"
               exact
-              render={() => (
-                <AboutPage
-                  title={this.state.about.title}
-                />
-              )}
+              render={() => <AboutPage title={this.state.about.title} />}
             />
             <Route
               path="/contact"
@@ -71,6 +68,7 @@ class App extends React.Component {
                 />
               )}
             />
+            <Route path="/blog" exact render={() => <InstaPage />} />
           </Switch>
           <Footer />
         </Container>

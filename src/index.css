@@ -1,7 +1,9 @@
 * {
-  font-family: 'Monserrat', sans-serif;
+  font-family: 'Comfortaa',
+    cursive;
   font-weight: 400;
 }
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -23,7 +25,9 @@ p {
 .contact:hover {
   color: #4dd0e1;
 }
-.contact:focus, .contact:active {
+
+.contact:focus,
+.contact:active {
   color: #00bcd4;
 }
 
@@ -55,9 +59,9 @@ p {
 .contact:hover::before,
 .contact:focus::before {
   -webkit-transform-origin: center top;
-          transform-origin: center top;
+  transform-origin: center top;
   -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+  transform: scale(1, 1);
 }
 
 .g-card {
@@ -90,8 +94,8 @@ p {
   margin: 0px;
 }
 
-.contact {     
-  display: inline-block;     
+.contact {
+  display: inline-block;
   position: relative;
   font-size: 200%;
   z-index: 1;
@@ -112,4 +116,12 @@ p {
   vertical-align: baseline;
   display: inline-block;
   margin-right: 5px;
+}
+
+.instagram-photo {
+  border: 4px solid #fff;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+  flex: 1 0 auto;
+  margin: 8px;
+  position: relative;
 }
