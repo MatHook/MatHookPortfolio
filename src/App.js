@@ -8,6 +8,7 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import HomePage from "./pages/HomePage";
 import InstaPage from "./pages/InstaPage";
+import TestfieldPage from "./pages/TestfieldPage"
 
 class App extends React.Component {
   constructor(props) {
