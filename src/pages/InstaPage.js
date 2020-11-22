@@ -18,7 +18,7 @@ const InstaPage = () => {
   return (
     <Container fluid={true}>
       <h1 className="text-center font-weight-bolder">
-        Welcome to my Insta Feed
+        Welcome to the little part of an Instagram feed
       </h1>
       <Row>
         {photos.map((item, key) => (

@@ -56,10 +56,10 @@ function AboutPage(props) {
 
         <div className="text-center">
           <GitHubCalendar username="mathook" blockMargin={4} />
-          <p className="text-danger text-center">
+          <i className="text-center">
             Some of the working days are not <i>active</i> because everyone have
             the private corners in our minds
-          </p>
+          </i>
         </div>
       </Content>
       <animated.div style={style}>

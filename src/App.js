@@ -70,7 +70,7 @@ class App extends React.Component {
               )}
             />
             <Route path="/blog" exact render={() => <InstaPage />} />
-            <Route path="/prac" exact render={() => <PracPage />} />
+            <Route path="/practices" exact render={() => <PracPage />} />
           </Switch>
           <Footer />
         </Container>

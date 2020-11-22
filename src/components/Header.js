@@ -4,6 +4,7 @@ import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import { Link } from "react-router-dom";
 import Typist from "react-typist";
+import { FaInstagram } from "react-icons/fa";
 
 function Header() {
   return (
@@ -29,8 +30,11 @@ function Header() {
           <Link className="nav-link" to="/contact" data-toggle="collapse">
             Contact
           </Link>
-          <Link className="nav-link" to="/prac" data-toggle="collapse">
+          <Link className="nav-link" to="/practices" data-toggle="collapse">
             Practices
+          </Link>
+          <Link to="/blog" className="nav-link">
+            InstaFeed
           </Link>
         </Nav>
       </NavbarCollapse>

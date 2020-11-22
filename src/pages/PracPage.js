@@ -5,18 +5,22 @@ import { Row, Container } from "react-bootstrap";
 
 const PracPage = () => {
   const [tasks, setTasks] = useState([]);
+  const [path, setPath] = useState("Arrays");
 
   //TODO: make options to choose directory
   useEffect(() => {
     axios
-      .get("https://api.github.com/repos/MatHook/FDT/contents/Arrays")
+      .get(`https://api.github.com/repos/MatHook/FDT/contents/${path}`)
       .then(({ data }) => {
         data.forEach((item) => {
-          if (item.type === "file")
+          console.log(item);
+          if (
+            (item.type === "file" && item.name.includes(".ts")) ||
+            item.name.includes(".js")
+          )
             axios
               .get(item.download_url)
               .then((res) => {
-                console.log(data);
                 setTasks((tasks) => [...tasks, res]);
               })
               .catch((err) => {
@@ -24,11 +28,25 @@ const PracPage = () => {
               });
         });
       });
-  }, []);
+  }, [path]);
+
+  const changePath = (newPath) => {
+    setTasks([]);
+    setPath(newPath);
+  };
 
   return (
     <Container>
-      <h1>Practice Page</h1>
+      <Row className="p-0 justify-content-around">
+        <h1>Practice Page</h1>
+        <h1>{path}</h1>
+      </Row>
+      <Row className="p-0 justify-content-around">
+        <button onClick={() => changePath("Arrays")}>Arrays</button>
+        <button onClick={() => changePath("MathNums")}>MathNums</button>
+        <button onClick={() => changePath("Strings")}>Strings</button>
+        <button onClick={() => changePath("YndTest")}>Yandex Test</button>
+      </Row>
       {tasks.map((item, key) => (
         <Row key={key}>
           <div className="w-100 p-3">
