@@ -4,7 +4,6 @@ import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import { Link } from "react-router-dom";
 import Typist from "react-typist";
-import { FaInstagram } from "react-icons/fa";
 
 function Header() {
   return (
