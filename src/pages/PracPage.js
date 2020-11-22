@@ -28,7 +28,7 @@ const PracPage = () => {
 
   return (
     <Container>
-      <h1>Prac Page</h1>
+      <h1>Practice Page</h1>
       {tasks.map((item, key) => (
         <Row key={key}>
           <div className="w-100 p-3">
