@@ -29,6 +29,9 @@ function Header() {
           <Link className="nav-link" to="/contact" data-toggle="collapse">
             Contact
           </Link>
+          <Link className="nav-link" to="/prac" data-toggle="collapse">
+            Practices
+          </Link>
         </Nav>
       </NavbarCollapse>
     </Navbar>

@@ -25,12 +25,12 @@ const InstaPage = () => {
           <Col
             style={{ flexGrow: "unset" }}
             className="d-flex flex-column justify-content-center flex-wrap"
+            key={key}
           >
             <a
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              key={key}
               className="instagram-photo d-flex flex-column justify-content-center  flex-wrap"
             >
               <img

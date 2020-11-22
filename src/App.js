@@ -8,7 +8,7 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import HomePage from "./pages/HomePage";
 import InstaPage from "./pages/InstaPage";
-import TestfieldPage from "./pages/TestfieldPage"
+import PracPage from './pages/PracPage'
 
 class App extends React.Component {
   constructor(props) {
@@ -70,6 +70,7 @@ class App extends React.Component {
               )}
             />
             <Route path="/blog" exact render={() => <InstaPage />} />
+            <Route path="/prac" exact render={() => <PracPage />} />
           </Switch>
           <Footer />
         </Container>
