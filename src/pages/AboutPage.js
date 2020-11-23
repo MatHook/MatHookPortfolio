@@ -24,11 +24,10 @@ function AboutPage(props) {
       <Hero title={props.title} />
       <Content>
         <p>
-          I am finishing my higher education with a degree in Software Engineer,
-          and also have successful experience in startups. Was engaged in
-          writing FrontEnd on projects. Here are some of them:
-        </p>
-        <p>
+          I am finishing my higher education with a{" "}
+          <i>degree in Software Engineering</i>, and also have successful
+          experience in <i>startups</i>. Was engaged in writing <i>FrontEnd</i>
+          on projects. Here are some of them:
           <li>
             <b>Mobius </b>is an aggregator of information into a single news
             feed from social networks
@@ -36,8 +35,10 @@ function AboutPage(props) {
           <li>
             <b>Amethy</b> is a marketplace for authors
           </li>
-          For the purpose of personal growth, I master skills on the BackEnd in
-          my personal projects:
+        </p>
+        <p>
+          For the purpose of personal growth, I master skills on the <i>BackEnd</i>
+           in my personal projects:
           <li>
             <b>HSE Events Calendar</b> - integrator of events into the student's
             calendar
@@ -47,11 +48,11 @@ function AboutPage(props) {
           </li>
         </p>
         <p>
-          I am looking for non-standard solutions and never deviate from my
-          plans at the sight of failures, since a team approach to solving
-          problems always brings a positive result. I speak English (level C1).
-          Lived and worked for half a year in the USA, currently I continue to
-          expand my vocabulary and improve my accent.
+          I am looking for <i>non-standard solutions</i> and never deviate from
+          my plans at the sight of failures, since a team approach to solving
+          problems always brings a positive result. I <i>speak English</i>{" "}
+          (level C1). Lived and worked for half a year in the USA, currently I
+          continue to expand my vocabulary and improve my accent.
         </p>
 
         <div className="text-center">

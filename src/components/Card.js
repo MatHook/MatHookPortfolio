@@ -17,18 +17,20 @@ function Card(props) {
   }));
 
   return (
-    <animated.div
-      className="d-inline-block g-card"
-      onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
-      onMouseLeave={() => set({ xys: [0, 0, 1] })}
-      style={{ transform: propAnim.xys.interpolate(trans) }}
-      onClick={() => props.click(props.item)}
-    >
-      <img
-        className="g-card-img"
-        src={props.item.imgSrc}
-        alt={props.item.imgSrc}
-      />
+    <div>
+      <animated.div
+        className="d-inline-block g-card"
+        onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+        onMouseLeave={() => set({ xys: [0, 0, 1] })}
+        style={{ transform: propAnim.xys.interpolate(trans) }}
+        onClick={() => props.click(props.item)}
+      >
+        <img
+          className="g-card-img"
+          src={props.item.imgSrc}
+          alt={props.item.imgSrc}
+        />
+      </animated.div>
       {props.item.isSelected && (
         <CardInfo
           title={props.item.title}
@@ -36,7 +38,7 @@ function Card(props) {
           link={props.item.link}
         />
       )}
-    </animated.div>
+    </div>
   );
 }
 
