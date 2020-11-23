@@ -37,8 +37,8 @@ function AboutPage(props) {
           </li>
         </p>
         <p>
-          For the purpose of personal growth, I master skills on the <i>BackEnd</i>
-           in my personal projects:
+          For the purpose of personal growth, I master skills on the{" "}
+          <i>BackEnd</i> in my personal projects:
           <li>
             <b>HSE Events Calendar</b> - integrator of events into the student's
             calendar
