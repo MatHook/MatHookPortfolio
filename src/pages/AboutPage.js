@@ -24,9 +24,9 @@ function AboutPage(props) {
       <Hero title={props.title} />
       <Content>
         <p>
-          I am finishing my higher education with a{" "}
+          I am finishing my higher education with a
           <i>degree in Software Engineering</i>, and also have successful
-          experience in <i>startups</i>. Was engaged in writing <i>FrontEnd</i>
+          experience in <i>startups</i>. Was engaged in writing <i>FrontEnd</i>{" "}
           on projects. Here are some of them:
           <li>
             <b>Mobius </b>is an aggregator of information into a single news
