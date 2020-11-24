@@ -8,7 +8,6 @@ const SecretPage = () => {
   const [hiden, setHiden] = useState(true)
 
   const onSubmit = () => {
-    //nydaagochksna
     if (process.env.REACT_APP_KEY.includes(code) && code.length > 5) {
       setCheck(true);
       console.log(code);
