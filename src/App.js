@@ -8,7 +8,7 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import HomePage from "./pages/HomePage";
 import InstaPage from "./pages/InstaPage";
-import PracPage from './pages/PracPage'
+import PracPage from "./pages/PracPage";
 import SecretPage from "./pages/SecretPage";
 
 class App extends React.Component {
@@ -42,38 +42,40 @@ class App extends React.Component {
       <Router>
         <Container className="p-0 App" fluid={true}>
           <Header />
-          <Switch>
-            <Route
-              path="/"
-              exact
-              render={() => (
-                <HomePage
-                  title={this.state.home.title}
-                  subTitle={this.state.home.subTitle}
-                  text={this.state.home.text}
-                />
-              )}
-            />
-            <Route
-              path="/about"
-              exact
-              render={() => <AboutPage title={this.state.about.title} />}
-            />
-            <Route
-              path="/contact"
-              exact
-              render={() => (
-                <ContactPage
-                  title={this.state.contact.title}
-                  subTitle={this.state.contact.subTitle}
-                  text={this.state.contact.text}
-                />
-              )}
-            />
-            <Route path="/blog" exact render={() => <InstaPage />} />
-            <Route path="/practices" exact render={() => <PracPage />} />
-            <Route path="/secret" exact render={() => <SecretPage />} />
-          </Switch>
+          <div className="container">
+            <Switch>
+              <Route
+                path="/"
+                exact
+                render={() => (
+                  <HomePage
+                    title={this.state.home.title}
+                    subTitle={this.state.home.subTitle}
+                    text={this.state.home.text}
+                  />
+                )}
+              />
+              <Route
+                path="/about"
+                exact
+                render={() => <AboutPage title={this.state.about.title} />}
+              />
+              <Route
+                path="/contact"
+                exact
+                render={() => (
+                  <ContactPage
+                    title={this.state.contact.title}
+                    subTitle={this.state.contact.subTitle}
+                    text={this.state.contact.text}
+                  />
+                )}
+              />
+              <Route path="/blog" exact render={() => <InstaPage />} />
+              <Route path="/practices" exact render={() => <PracPage />} />
+              <Route path="/secret" exact render={() => <SecretPage />} />
+            </Switch>
+          </div>
           <Footer />
         </Container>
       </Router>
