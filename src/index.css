@@ -129,3 +129,29 @@ p {
 .secret-block {
   min-height: 65vh;
 }
+
+.squares {
+  background: #fff;
+  border: none;
+  font-size: 5rem;
+  outline: none;
+}
+
+.board {
+  border: 0.3rem solid #212529;
+  background: #212529;
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 0.3rem;
+}
+
+.X {
+  color: green;
+}
+
+.O {
+  color: red;
+}
+

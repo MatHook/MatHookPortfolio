@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
+import Game from "../components/game/Game";
 
 const SecretPage = () => {
   const [code, setCode] = useState("");
   const [check, setCheck] = useState(false);
+  const [hiden, setHiden] = useState(true)
 
   const onSubmit = () => {
     //nydaagochksna
-    console.log(code);
-    if (process.env.REACT_APP_KEY.includes(code)) {
+    if (process.env.REACT_APP_KEY.includes(code) && code.length > 5) {
       setCheck(true);
-    } 
+      console.log(code);
+    } else if (!process.env.REACT_APP_KEY.includes(code)) {
+      setCheck(false);
+      setHiden(false)
+    }
   };
 
   return (
@@ -23,9 +28,14 @@ const SecretPage = () => {
         />
         <button onClick={() => onSubmit()}>Submit</button>
         {check ? (
-          <span className="text-success">Entered succsessfully</span>
+          <div>
+            <span className="text-success">Entered succsessfully</span>
+            <Game />
+          </div>
+        ) : hiden ? (
+          <div></div>
         ) : (
-          <></>
+          <div className="text-danger">Wrong code</div>
         )}
       </div>
     </Container>
