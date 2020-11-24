@@ -35,6 +35,9 @@ function Header() {
           <Link to="/blog" className="nav-link">
             InstaFeed
           </Link>
+          <Link to="/secret" className="nav-link">
+            Secret
+          </Link>
         </Nav>
       </NavbarCollapse>
     </Navbar>

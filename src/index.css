@@ -125,3 +125,7 @@ p {
   margin: 8px;
   position: relative;
 }
+
+.secret-block {
+  min-height: 65vh;
+}
