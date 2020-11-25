@@ -8,7 +8,7 @@ export default function Footer() {
       <Container fluid={true}>
         <Row className="justify-content-between p-3 container mx-auto">
           <Col className="p-0" md={3} sd={12}>
-            Matthew Hook
+            Just a portfolio ¬_¬
           </Col>
           <Col className="p-0 d-flex justify-content-end" md={6}>
             Copyright @ 2020 - Matthew Hook. All rights Reserved

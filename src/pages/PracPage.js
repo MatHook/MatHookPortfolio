@@ -46,6 +46,7 @@ const PracPage = () => {
         <button onClick={() => changePath("MathNums")}>MathNums</button>
         <button onClick={() => changePath("Strings")}>Strings</button>
         <button onClick={() => changePath("YndTest")}>Yandex Test</button>
+        <button onClick={() => changePath("Interviews")}>Interviews</button>
       </Row>
       {tasks.map((item, key) => (
         <Row key={key}>
