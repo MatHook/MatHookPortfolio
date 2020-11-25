@@ -59,10 +59,10 @@ class App extends React.Component {
                   opacity: 1,
                 },
                 backgroundMask: {
-                  composite: "destination-out",
+                  composite: "multiply",
                   cover: {
                     color: {
-                      value: "#fff",
+                      value: "#fba96a",
                     },
                     opacity: 1,
                   },
@@ -73,7 +73,7 @@ class App extends React.Component {
                   zIndex: -1,
                 },
                 detectRetina: true,
-                fpsLimit: 60,
+                fpsLimit: 120,
                 infection: {
                   cure: false,
                   delay: 0,
@@ -86,30 +86,30 @@ class App extends React.Component {
                   events: {
                     onClick: {
                       enable: false,
-                      mode: [],
+                      mode: "push",
                     },
                     onDiv: {
                       selectors: [],
                       enable: false,
-                      mode: [],
+                      mode: "repulse",
                       type: "circle",
                     },
                     onHover: {
                       enable: true,
-                      mode: "trail",
+                      mode: "attract",
                       parallax: {
-                        enable: false,
-                        force: 2,
-                        smooth: 10,
+                        enable: true,
+                        force: 15,
+                        smooth: 75,
                       },
                     },
                     resize: true,
                   },
                   modes: {
                     attract: {
-                      distance: 200,
-                      duration: 0.4,
-                      speed: 1,
+                      distance: 300,
+                      duration: 1,
+                      speed: 1.2,
                     },
                     bounce: {
                       distance: 200,
@@ -317,7 +317,7 @@ class App extends React.Component {
                     mode: "bounce",
                   },
                   color: {
-                    value: "#f00",
+                    value: "000",
                     animation: {
                       enable: true,
                       speed: 50,
@@ -344,28 +344,32 @@ class App extends React.Component {
                     },
                   },
                   links: {
-                    blink: true,
+                    blink: false,
                     color: {
-                      value: "#000000",
+                      value: "#000",
                     },
                     consent: false,
                     distance: 100,
                     enable: true,
                     frequency: 1,
-                    opacity: 0.35,
+                    opacity: 1,
                     shadow: {
                       blur: 5,
                       color: {
-                        value: "#00ff00",
+                        value: "#3700ff",
                       },
                       enable: false,
                     },
                     triangles: {
                       enable: false,
                       frequency: 1,
+                      color: {
+                        value: "#000",
+                      },
+                      opacity: 0.15,
                     },
-                    width: 1,
-                    warp: false,
+                    width: 2,
+                    warp: true,
                   },
                   move: {
                     angle: {
@@ -383,9 +387,9 @@ class App extends React.Component {
                     distance: 0,
                     enable: true,
                     gravity: {
-                      acceleration: 9.81,
+                      acceleration: 3,
                       enable: false,
-                      maxSpeed: 50,
+                      maxSpeed: 1,
                     },
                     noise: {
                       delay: {
@@ -400,10 +404,10 @@ class App extends React.Component {
                     outModes: {
                       default: "out",
                     },
-                    random: false,
-                    size: false,
-                    speed: 2,
-                    straight: false,
+                    random: true,
+                    size: true,
+                    speed: 1,
+                    straight: true,
                     trail: {
                       enable: false,
                       length: 10,
@@ -412,7 +416,7 @@ class App extends React.Component {
                       },
                     },
                     vibrate: false,
-                    warp: false,
+                    warp: true,
                   },
                   number: {
                     density: {
@@ -428,7 +432,7 @@ class App extends React.Component {
                       enable: true,
                       minimumValue: 0.3,
                     },
-                    value: 0.01,
+                    value: 1,
                     animation: {
                       enable: true,
                       minimumValue: 0.3,
@@ -464,14 +468,14 @@ class App extends React.Component {
                   },
                   shape: {
                     options: {},
-                    type: "line",
+                    type: "circle",
                   },
                   size: {
                     random: {
                       enable: true,
                       minimumValue: 1,
                     },
-                    value: 15,
+                    value: 1,
                     animation: {
                       destroy: "none",
                       enable: true,
@@ -506,7 +510,7 @@ class App extends React.Component {
                   },
                 },
                 pauseOnBlur: true,
-                pauseOnOutsideViewport: false,
+                pauseOnOutsideViewport: true,
                 themes: [],
               }}
             />
