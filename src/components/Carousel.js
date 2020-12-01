@@ -25,10 +25,10 @@ export default class Carousel extends Component {
         },
         {
           id: 2,
-          title: "School",
-          subTitle: "Just a study work",
+          title: "Pizza Test",
+          subTitle: "React&Redux Pizza App",
           imgSrc: "./card2.jpg",
-          link: "https://github.com/MatHook/RTUSE",
+          link: "http://pizzashoptest.netlify.app/",
           isSelected: false,
         },
       ],
