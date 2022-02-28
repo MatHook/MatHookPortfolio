@@ -28,10 +28,10 @@ const PracPage = () => {
               })
               .catch((err) => {
                 console.error(err);
-              });
-        });
-      });
-  }, [path]);
+              })
+        })
+      })
+  }, [path, tasks])
 
   const values = ['Arrays', 'MathNums', 'Strings', 'YndTest', 'Interviews']
 
