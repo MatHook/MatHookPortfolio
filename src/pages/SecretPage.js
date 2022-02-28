@@ -11,7 +11,6 @@ const SecretPage = () => {
   const onSubmit = () => {
     if (process.env.REACT_APP_KEY.includes(code) && code.length > 5) {
       setCheck(true);
-      console.log(code);
     } else if (!process.env.REACT_APP_KEY.includes(code)) {
       setCheck(false);
       setHiden(false);

@@ -4,24 +4,27 @@ import { CodeBlock, monoBlue } from "react-code-blocks";
 import { Row, Container } from "react-bootstrap";
 
 const PracPage = () => {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState({});
   const [path, setPath] = useState("Arrays");
 
-  //TODO: make options to choose directory
   useEffect(() => {
-    axios
+    (!tasks[path] || !tasks[path]?.length) && axios
       .get(`https://api.github.com/repos/MatHook/FDT/contents/${path}`)
       .then(({ data }) => {
         data.forEach((item) => {
-          console.log(item);
           if (
             (item.type === "file" && item.name.includes(".ts")) ||
             item.name.includes(".js")
           )
             axios
               .get(item.download_url)
-              .then((res) => {
-                setTasks((tasks) => [...tasks, res]);
+              .then(res => {
+                setTasks(prev => ({
+                  [path]: [
+                    ...(prev[path] || []),
+                    res.data
+                  ]
+                }));
               })
               .catch((err) => {
                 console.error(err);
@@ -30,10 +33,9 @@ const PracPage = () => {
       });
   }, [path]);
 
-  const changePath = (newPath) => {
-    setTasks([]);
-    setPath(newPath);
-  };
+  const values = ['Arrays', 'MathNums', 'Strings', 'YndTest', 'Interviews']
+
+  const items = tasks[path] ? tasks[path] : []
 
   return (
     <Container>
@@ -42,18 +44,21 @@ const PracPage = () => {
         <h1>{path}</h1>
       </Row>
       <Row className="p-0 justify-content-around">
-        <button onClick={() => changePath("Arrays")}>Arrays</button>
-        <button onClick={() => changePath("MathNums")}>MathNums</button>
-        <button onClick={() => changePath("Strings")}>Strings</button>
-        <button onClick={() => changePath("YndTest")}>Yandex Test</button>
-        <button onClick={() => changePath("Interviews")}>Interviews</button>
+        {values.map((p, i) => (
+          <button
+            key={i}
+            onClick={() => setPath(p)}
+          >
+            {p}
+          </button>))
+        }
       </Row>
-      {tasks.map((item, key) => (
+      {items.map((item, key) => (
         <Row key={key}>
           <div className="w-100 p-3">
             <span>{key + 1} Task</span>
             <CodeBlock
-              text={item.data}
+              text={item}
               language={"javascript"}
               theme={monoBlue}
               showLineNumbers={true}

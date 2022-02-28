@@ -6,7 +6,7 @@ import { SiGmail } from 'react-icons/si'
 import { IoDocumentAttachSharp } from "react-icons/io5";
 import Icon24LogoVk from '@vkontakte/icons/dist/24/logo_vk';
 
-function ContactPage(props) {
+function ContactPage (props) {
   return (
     <Container fluid={true}>
       <Hero title={props.title} subTitle={props.subTitle} text={props.text} />
@@ -76,6 +76,17 @@ function ContactPage(props) {
               rel="noopener noreferrer"
             >
               HH
+            </a>
+          </Col>
+          <Col>
+            <IoDocumentAttachSharp className="icon" size={25} />
+            <a
+              className="contact"
+              href="./Kryuchkov MR.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CV
             </a>
           </Col>
         </Row>

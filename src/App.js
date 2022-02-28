@@ -7,12 +7,11 @@ import Header from "./components/Header";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import HomePage from "./pages/HomePage";
-import InstaPage from "./pages/InstaPage";
 import PracPage from "./pages/PracPage";
 import SecretPage from "./pages/SecretPage";
 
 class App extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
     this.state = {
       title: "Matthew Hook",
@@ -37,7 +36,7 @@ class App extends React.Component {
     };
   }
 
-  render() {
+  render () {
     return (
       <Router>
         <Container className="p-0 App" fluid={true}>
@@ -71,9 +70,9 @@ class App extends React.Component {
                   />
                 )}
               />
-              <Route path="/blog" exact render={() => <InstaPage />} />
               <Route path="/practices" exact render={() => <PracPage />} />
               <Route path="/secret" exact render={() => <SecretPage />} />
+              <Route><b>404 Not Found</b></Route>
             </Switch>
           </div>
           <Footer />

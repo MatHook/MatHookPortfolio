@@ -11,7 +11,7 @@ import nestIcon from "@iconify/icons-file-icons/nestjs";
 import { Icon } from "@iconify/react";
 import GitHubCalendar from "react-github-calendar";
 
-function AboutPage(props) {
+function AboutPage (props) {
   const style = useSpring({
     opacity: 1,
     from: { opacity: 0 },
@@ -48,6 +48,15 @@ function AboutPage(props) {
           </li>
         </p>
         <p>
+          My Working experience{" "}
+          <li>
+            <b>A2I2M</b> - B2B product for Russian pharm companies. Understanding ReactJS stack, optimizing build configuration. Researches in layout, styling and etc.
+          </li>
+          <li>
+            <b>Innoscripta GmbH</b> - SaaS platform to connect scientists and businesse, CRM for internal use. Making attempts to manage projects, contacting with client and making profit choice. Working with React, Redux-saga and etc.
+          </li>
+        </p>
+        <p>
           I am looking for <i>non-standard solutions</i> and never deviate from
           my plans at the sight of failures, since a team approach to solving
           problems always brings a positive result. I <i>speak English</i>{" "}
@@ -66,14 +75,14 @@ function AboutPage(props) {
       <animated.div style={style}>
         <Container fluid={true}>
           <Row className="justify-content-center" xs={2}>
-            <Col md={4}>
+            <Col md={4} className="text-center">
               <h1 className="d-inline-block">
                 <GrAchievement /> Skills
               </h1>
             </Col>
           </Row>
           <Row className="justify-content-center">
-            <Col md={4} xs={6}>
+            <Col md={4} xs={6} className="text-center">
               <h2>Front-end</h2>
               <Col className="pl-0">
                 <h3>
@@ -106,7 +115,7 @@ function AboutPage(props) {
                 </h3>
               </Col>
             </Col>
-            <Col md={4} xs={5}>
+            <Col md={4} xs={5} className="text-center">
               <h2>Back-end</h2>
               <Col className="pl-0">
                 <h3>

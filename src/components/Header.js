@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import Typist from "react-typist";
 import "../App.css";
 
-function Header() {
+function Header () {
   return (
     <Navbar className="border-bottom" bg="transparent" expand="lg">
       <div className="container">
@@ -33,9 +33,6 @@ function Header() {
             </Link>
             <Link className="nav-link" to="/practices" data-toggle="collapse">
               Practices
-            </Link>
-            <Link to="/blog" className="nav-link">
-              InstaFeed
             </Link>
             <Link to="/secret" className="nav-link">
               Secret
