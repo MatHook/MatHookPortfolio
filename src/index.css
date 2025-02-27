@@ -1,165 +1,72 @@
-* {
-  font-family: 'Comfortaa',
-    cursive;
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
   font-weight: 400;
-}
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
-p {
-  text-align: justify;
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
 }
 
-.contact:hover {
-  color: #4dd0e1;
+.left {
+  text-align: left;
+  width: 50%;
 }
 
-.contact:focus,
-.contact:active {
-  color: #00bcd4;
+.right {
+  text-align: right;
+  width: 50%;
+  margin-left: auto;
 }
 
-.contact::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 100%;
-  height: 3px;
-  width: 100%;
-  background-color: #00bcd4;
-  -webkit-transform-origin: center top;
-  transform-origin: center top;
-  -webkit-transform: scale(0, 1);
-  transform: scale(0, 1);
-  transition: color 0.1s, -webkit-transform 0.2s ease-out;
-  transition: color 0.1s, transform 0.2s ease-out;
-  transition: color 0.1s, transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
-  -webkit-transition: color 0.1s, transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
-  -moz-transition: color 0.1s, transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
-  -ms-transition: color 0.1s, transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
-  -o-transition: color 0.1s, transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+@media (width <= 550px) {
+  .left {
+    width: 100%;
+  }
+
+  .right {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
-.contact:active::before {
-  background-color: #00bcd4;
+ul {
+  list-style: none;
 }
 
-.contact:hover::before,
-.contact:focus::before {
-  -webkit-transform-origin: center top;
-  transform-origin: center top;
-  -webkit-transform: scale(1, 1);
-  transform: scale(1, 1);
-}
-
-.g-card {
-  margin: 20px;
-}
-
-.g-card-img {
-  border-radius: 10px;
-  width: 300px;
-  height: 480px;
-  box-shadow: 0px 0px 3px 1px #ccf;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-}
-
-.g-card-info {
-  margin-top: 10px;
-  min-height: 100px;
-}
-
-.g-card-title {
-  font-size: 24px;
-  margin: 0px;
-}
-
-.g-card-sub-title {
-  font-size: 16px;
-  margin: 0px;
-}
-
-.contact {
-  display: inline-block;
+li::before {
+  content: "— ";
   position: relative;
-  font-size: 200%;
-  z-index: 1;
-  color: black
-}
-
-.contact:hover {
-  text-decoration: none;
-  color: #00bcd4;
-}
-
-.icon {
-  vertical-align: baseline;
-  margin-right: 5px;
-}
-
-.vk-icon {
-  vertical-align: baseline;
+  left: -6px;
+  margin-left: -21px;
   display: inline-block;
-  margin-right: 5px;
+  vertical-align: top;
+  margin-right: 0px;
 }
 
-.instagram-photo {
-  border: 4px solid #fff;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
-  flex: 1 0 auto;
-  margin: 8px;
-  position: relative;
-}
-
-.secret-block {
-  min-height: 65vh;
-}
-
-.squares {
-  background: #fff;
-  border: none;
-  font-size: 5rem;
-  outline: none;
-}
-
-.board {
-  border: 0.3rem solid #212529;
-  background: #212529;
-  width: 500px;
-  height: 500px;
-  display: grid;
-  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-  gap: 0.3rem;
-}
-
-.X {
-  color: green;
-}
-
-.O {
-  color: red;
-}
-
-audio:hover {
-  transform: scale(1.1);
-  filter: drop-shadow(2px 3px 3px #333);
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
+h4 {
+  margin: 0;
 }
