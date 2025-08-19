@@ -33,6 +33,16 @@ function Legends() {
       linkText: "@я_не_ебу",
       title: "Настя Шародуева Н13",
     },
+    {
+      href: "t.me/E888KX97",
+      linkText: "@E888KX97",
+      title: "Валерий БорисаПастернака13 Вталович (эвик)",
+    },
+    {
+      href: "t.me/E5Death",
+      linkText: "@E5Death",
+      title: "Иван Ниссан ГТР 500+ Анлим",
+    },
   ] as const;
 
   return (
@@ -85,7 +95,7 @@ function Main() {
 function App() {
   const [value, setValue] = useState<string>("МатХук");
 
-  const isShowingOther = !!ComponentBySearch[value.toLowerCase()];
+  const isShowingOther = !!ComponentBySearch[value.toLowerCase().trim()];
 
   return (
     <>
@@ -102,7 +112,7 @@ function App() {
           autoFocus
         />
       </h1>
-      {ComponentBySearch[value.toLowerCase()] || Main()}
+      {ComponentBySearch[value.toLowerCase().trim()] || Main()}
     </>
   );
 }
