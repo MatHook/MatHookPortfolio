@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import olafPng from "/olaf.png";
 import "./App.css";
 
@@ -85,6 +86,14 @@ function Main() {
           <li>
             <a href="mailto:mathook00@gmail.com">mathook00@gmail.com</a> – или
             напиши сообщение на почту
+          </li>
+        </ul>
+      </div>
+      <div className="right">
+        <h2>А ещё...</h2>
+        <ul>
+          <li>
+            <Link to="/wishlist">Вишлист</Link> – если хочешь сделать подарок
           </li>
         </ul>
       </div>
