@@ -4,7 +4,6 @@ import type {
   CreateWishBody,
   ReservationResult,
   Wish,
-  WishStatus,
 } from "../types/wishlist";
 
 class ApiError extends Error {
@@ -44,11 +43,12 @@ export function createReservation(
   wishId: string,
   name: string,
   message: string,
+  participants: number,
 ): Promise<ReservationResult> {
   return request("/.netlify/functions/reservations", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ wish_id: wishId, name, message }),
+    body: JSON.stringify({ wish_id: wishId, name, message, participants }),
   });
 }
 
@@ -82,7 +82,7 @@ export function createWish(
 export function updateWish(
   secret: string,
   id: string,
-  data: { status: WishStatus },
+  data: Partial<Omit<Wish, "id" | "created_at">>,
 ): Promise<Wish> {
   return request(`/.netlify/functions/wishes-manage?id=${id}`, {
     method: "PATCH",

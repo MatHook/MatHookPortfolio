@@ -21,13 +21,14 @@ export function WishCard({
   const [showForm, setShowForm] = useState(false);
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
+  const [participants, setParticipants] = useState(1);
   const [submitting, setSubmitting] = useState(false);
   const [cancelUrl, setCancelUrl] = useState<string | null>(null);
+  const [savedParticipants, setSavedParticipants] = useState(1);
 
   const isFull = wish.reserved_slots >= wish.max_slots;
-  const hasOpenSlots = wish.reserved_slots < wish.max_slots;
 
-  // Auto-scroll & open form when highlighted via invite link
+  // Auto-scroll & highlight via invite link
   useEffect(() => {
     if (highlighted && !isFull) {
       cardRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -42,8 +43,9 @@ export function WishCard({
     setSubmitting(true);
 
     try {
-      const data = await createReservation(wish.id, name, message);
+      const data = await createReservation(wish.id, name, message, participants);
       setCancelUrl(data.cancel_url);
+      setSavedParticipants(participants);
       setShowForm(false);
 
       onReserved((prev) =>
@@ -97,9 +99,11 @@ export function WishCard({
           <p>Зарезервировано! Сохрани ссылку для отмены:</p>
           <a href={cancelUrl}>{cancelUrl}</a>
 
-          {hasOpenSlots && (
+          {savedParticipants > 1 && (
             <div className="wish-card__invite">
-              <p>Хочешь разделить подарок? Отправь ссылку друзьям:</p>
+              <p>
+                Вас {savedParticipants} — отправь ссылку остальным участникам:
+              </p>
               <div className="invite-row">
                 <input type="text" readOnly value={inviteUrl} />
                 <button type="button" onClick={handleCopyInvite}>
@@ -133,6 +137,19 @@ export function WishCard({
             onChange={(e) => setMessage(e.target.value)}
             rows={2}
           />
+          <div className="reserve-form__participants">
+            <label>
+              Сколько человек скидываются:
+              <input
+                type="number"
+                value={participants}
+                onChange={(e) =>
+                  setParticipants(Math.max(1, Number(e.target.value)))
+                }
+                min={1}
+              />
+            </label>
+          </div>
           <div className="reserve-form__actions">
             <button type="submit" disabled={submitting}>
               {submitting ? "..." : "Подтвердить"}

@@ -91,7 +91,7 @@ export function AddWishForm({
         </select>
         <input
           type="number"
-          placeholder="Слотов"
+          placeholder="Кол-во"
           value={form.max_slots || ""}
           onChange={(e) =>
             setForm({ ...form, max_slots: Number(e.target.value) })

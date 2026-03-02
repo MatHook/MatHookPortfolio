@@ -5,7 +5,7 @@ export default async function handler(request: Request, _context: Context) {
   if (request.method !== "POST") return error("Method not allowed", 405);
 
   const body = await request.json();
-  const { wish_id, name, message } = body;
+  const { wish_id, name, message, participants } = body;
 
   if (!wish_id || !name) return error("wish_id and name are required");
 
@@ -30,6 +30,7 @@ export default async function handler(request: Request, _context: Context) {
     wish_id,
     name,
     message: message || "",
+    participants: participants || 1,
     token,
   });
 

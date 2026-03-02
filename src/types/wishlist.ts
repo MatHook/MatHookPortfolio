@@ -18,6 +18,7 @@ export interface Reservation {
   wish_id: string;
   name: string;
   message: string;
+  participants: number;
   token: string;
   created_at: string;
 }
@@ -47,6 +48,7 @@ export interface CreateReservationBody {
   wish_id: string;
   name: string;
   message?: string;
+  participants?: number;
 }
 
 /** Response after creating a reservation */
