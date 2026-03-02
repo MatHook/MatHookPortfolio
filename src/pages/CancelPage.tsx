@@ -1,24 +1,20 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import { cancelReservation } from "../api/wishlistApi";
 import "./Wishlist.css";
 
 export function CancelPage() {
   const { token } = useParams<{ token: string }>();
   const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">(
-    "idle"
+    "idle",
   );
 
   async function handleCancel() {
+    if (!token) return;
     setStatus("loading");
     try {
-      const res = await fetch(`/api/reservations-cancel?token=${token}`, {
-        method: "DELETE",
-      });
-      if (res.ok) {
-        setStatus("done");
-      } else {
-        setStatus("error");
-      }
+      await cancelReservation(token);
+      setStatus("done");
     } catch {
       setStatus("error");
     }
